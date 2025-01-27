@@ -1,32 +1,25 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h> // For sleep (simulate real-time behavior)
+#include "../include/speed_sensor.h"
+#include "../include/throttle_control.h"
 
-// Global variables (MISRA rule 8.3 violation: Avoid using global variables)
-int global_variable = 10;
+int main() {
+    float current_speed = 0.0;
+    float target_speed = 60.0; // Target speed in km/h
 
-// Function declaration
-void do_something(int value);
+    printf("Starting ECU Simulation...\n");
 
-int main(void)
-{
-    int i; // Local variable declaration without initialization (MISRA rule 9.1 violation)
-    printf("Hello, MISRA!\n");
+    while (1) {
+        // Read current speed from speed sensor
+        current_speed = read_speed_sensor();
 
-    // Loop with potential infinite behavior (MISRA rule 14.2 violation)
-    for (;;) {
-        if (i > 0) {
-            break; // Breaking from the infinite loop
-        }
+        // Adjust throttle based on current speed and target speed
+        adjust_throttle(current_speed, target_speed);
+
+        // Simulate periodic updates (e.g., every 1 second)
+        sleep(1);
     }
 
-    // Calling a function with potential side effects
-    do_something(global_variable);
     return 0;
-}
-
-// Function implementation
-void do_something(int value)
-{
-    printf("Processing value: %d\n", value);
-    // Non-compliant: modifying the global variable (MISRA rule 8.7 violation)
-    global_variable += value;
 }
