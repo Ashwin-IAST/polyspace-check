@@ -1,0 +1,14 @@
+{
+    "files": [
+        "src/handwritten_code_1.c",
+        "src/handwritten_code_2.c",
+        "src/handwritten_code_3.c"
+    ],
+    "misra_rules": [
+        "Rule-1-1",
+        "Rule-8-4",
+        "Rule-10-1"
+    ],
+    "compiler": "gcc",
+    "target": "x86_64"
+}
