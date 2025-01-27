@@ -1,15 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<polyspace_checkers_selection>
-    <checkers>
-        <checker>
-            <name>misra_c_2012</name>
-            <enabled>true</enabled>
-            <rules>
-                <rule>Rule-1-1</rule>
-                <rule>Rule-8-4</rule>
-                <rule>Rule-10-1</rule>
-                <!-- Add more MISRA rules as needed -->
-            </rules>
-        </checker>
-    </checkers>
-</polyspace_checkers_selection>
+?xml version="1.0" encoding="UTF-8"?>
+<checkers>
+   <checker name="MISRA C:2012">
+      <rule id="mandatory" enabled="true"/>
+      <rule id="required" enabled="true"/>
+      <rule id="advisory" enabled="false"/>
+   </checker>
+   <checker name="Bug Finder Defects">
+      <rule id="all" enabled="true"/>
+   </checker>
+</checkers>
