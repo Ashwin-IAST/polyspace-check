@@ -1,7 +1,7 @@
 {
     "files": [
         "src/main.c",
-        "src/handwritten_code_3.c"
+        "src/speed_sensor.c"
     ],
     "misra_rules": [
         "Rule-1-1",
