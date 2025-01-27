@@ -1,3 +1,2 @@
-src/handwritten_code_1.c
-src/handwritten_code_2.c
-src/handwritten_code_3.c
+src/main.c
+src/speed_sensor.c
