@@ -1,5 +1,0 @@
--checkers-activation-file checkers.xml
--report-template BugFinderSurvey
--results-dir ps_results
--report-output-format pdf
--report-output-format html
